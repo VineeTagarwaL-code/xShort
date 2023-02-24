@@ -1,0 +1,78 @@
+{% load static %}
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href={% static "main.css" %}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="main-container">
+
+    <div class="nav">
+      <nav>
+        <p id="title">xSHORT</p>
+        <div class="about-detail">
+          <ul>
+            <li>
+              About
+            </li>
+            <li>-</li>
+            <li>
+              Developer
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+ 
+    <div class="main-frame">
+      <div class="sub-frame">
+        <img src={% static 'rocket.png' %} alt="My image">
+        <ul>
+          <li>Little</li>
+          <li class="green">Links</li>
+          <li>Bigger</li>
+          <li class="green">Stories</li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="subclass-frame">
+      <ul>
+        <li>Create </li>
+        <li class="green">Your's </li>
+        <li>Below </li>
+
+      </ul>
+       
+       
+    </div>
+    <div class="form-container">
+      <form method="POST"> {% csrf_token %}
+        {{f.as_p}}
+        <button type="submit" class="submit" >Create</button>
+      </form>
+    
+    </div>
+    <div class="output">
+      <div id="bar">
+        <div id="red">
+        </div>
+        <div id="yellow">
+        </div>
+        <div id="green">
+        </div>
+    </div>
+    <div id="screen">
+      <p class="font">{{link}}</p>
+  </div>
+    </div>
+  </div>
+</body>
+
+</html>
